@@ -7,6 +7,13 @@ import { ToastContainer, toast } from "react-toastify";
 import Logout from "./Logout";
 
 const Pages = () => {
+	const navigate = useNavigate();
+	useEffect(async () => {
+		if (!localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)) {
+			navigate("/");
+		}
+	}, []);
+
 	return (
 		<FormContainer>
 			<div>
