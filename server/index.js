@@ -20,7 +20,7 @@ mongoose
 		console.log(err.message);
 	});
 
-app.use("/api/auth", authRoutes);
+app.use("/", authRoutes);
 
 const server = app.listen(process.env.PORT, () =>
 	console.log(`Server started on ${process.env.PORT}`)

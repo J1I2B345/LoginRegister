@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Pages from "./pages/Pages";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 export default function App() {
@@ -7,8 +8,8 @@ export default function App() {
 		<BrowserRouter>
 			<Routes>
 				<Route path="/register" element={<Register />} />
-				<Route path="/login" element={<Login />} />
-				{/* <Route path="/" element={<Pages />} /> */}
+				<Route path="/" element={<Login />} />
+				<Route path="/pages" element={<Pages />} />
 			</Routes>
 		</BrowserRouter>
 	);
