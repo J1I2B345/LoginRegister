@@ -55,7 +55,6 @@ export default function Login() {
 					process.env.REACT_APP_LOCALHOST_KEY,
 					JSON.stringify(data.user)
 				);
-
 				navigate("/pages");
 			}
 		}
@@ -67,7 +66,7 @@ export default function Login() {
 				<form action="" onSubmit={(event) => handleSubmit(event)}>
 					<div className="brand">
 						<img src={Logo} alt="logo" />
-						<h1>Aprendé QA testing</h1>
+						<h1>Aprendé QA</h1>
 					</div>
 					<input
 						type="text"
