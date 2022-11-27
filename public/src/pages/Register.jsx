@@ -43,13 +43,15 @@ export default function Register() {
 			return false;
 		} else if (username.length < 3) {
 			toast.error(
-				"Username should be greater than 3 characters.",
+				// "Username should be greater than 3 characters.",.
+				"Username is short",
 				toastOptions
 			);
 			return false;
 		} else if (password.length < 8) {
 			toast.error(
-				"Password should be equal or greater than 8 characters.",
+				// "Password should be equal or greater than 8 characters.",
+				"Password is wrong",
 				toastOptions
 			);
 			return false;
@@ -99,19 +101,19 @@ export default function Register() {
 						onChange={(e) => handleChange(e)}
 					/>
 					<input
-						type="email"
+						type="text"
 						placeholder="Email"
 						name="email"
 						onChange={(e) => handleChange(e)}
 					/>
 					<input
-						type="password"
+						type="text"
 						placeholder="Password"
 						name="password"
 						onChange={(e) => handleChange(e)}
 					/>
 					<input
-						type="password"
+						type="text"
 						placeholder="Confirm Password"
 						name="confirmPassword"
 						onChange={(e) => handleChange(e)}
