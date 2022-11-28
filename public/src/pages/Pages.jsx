@@ -17,9 +17,19 @@ const Pages = () => {
 	return (
 		<FormContainer>
 			<div>
-				<h1 style={{ color: "white" }}> link a página 'ecommerce'</h1>
-				<h1 style={{ color: "white" }}> link a página 'salarios'</h1>
-				<h1 style={{ color: "white" }}> link a página 'vet'</h1>
+				<h1 style={{ color: "white" }}>
+					{" "}
+					<a href="https://fakecommerce-pi.vercel.app/">
+						link a página 'ecommerce'
+					</a>
+				</h1>
+
+				<h1 style={{ color: "white" }}>
+					{" "}
+					<a href="https://form-4nmjx4xae-j1i2b345.vercel.app/">
+						link a página 'vet' hay que agregar img{" "}
+					</a>
+				</h1>
 			</div>
 			<Link to="/">
 				<button> Volver</button>
