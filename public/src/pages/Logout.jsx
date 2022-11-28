@@ -6,21 +6,20 @@ import axios from "axios";
 import { logoutRoute } from "../utils/APIRoutes";
 
 export default function Logout() {
-	// const navigate = useNavigate();
+	const navigate = useNavigate();
 
-	// para hacer funcionar el logout descomentar esto
-	// const handleClick = async () => {
-	// 	const id = await JSON.parse(
-	// 		localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)
-	// 	)._id;
-	// 	const data = await axios.get(`${logoutRoute}/${id}`);
-	// 	if (data.status === 200) {
-	// 		localStorage.clear();
-	// 		navigate("/");
-	// 	}
-	// };
+	const handleClick = async () => {
+		const id = await JSON.parse(
+			localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)
+		)._id;
+		const data = await axios.get(`${logoutRoute}/${id}`);
+		if (data.status === 200) {
+			localStorage.clear();
+			navigate("/");
+		}
+	};
 	return (
-		<Button onClick={() => alert("Cerraste sesion")}>
+		<Button onClick={handleClick}>
 			<BiPowerOff />
 		</Button>
 	);
